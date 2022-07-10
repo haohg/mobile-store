@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=width-device, initial-scale=1">
+    <title>Trang chủ - Hào Huỳnh Store</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="assets/css/small-device.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/themify-icons/themify-icons.css">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header id="header">
+        <div class="header__menu-icon header__icon header__js-btn-menu">
+            <div class="header__icon-bar"></div>
+            <div class="header__icon-bar"></div>
+            <div class="header__icon-bar"></div>
+        </div>
+        <div class="header__logo">
+            <a>HaoHuynh Store</a>
+        </div>
+        <i class="ti-search header__icon"></i>
+        <i class="ti-bag header__icon"></i>
+        <ul id="header-nav">
+            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="#">iPhone Quốc Tế</a></li>
+            <li><a href="#">iPhone 99%</a></li>
+            <li><a href="#">iPhone VN/a</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Airpod</a></li>
+            <li><a href="#">Phụ Kiện</a></li>
+            <li><a href="#">Thu Cũ Đổi Mới</a></li>
+        </ul>
+    </header>
+
+    <!-- Header End -->
+    <script>
+        // Show/Hide Menu
+        const btnMenu = document.querySelector('.header__js-btn-menu');
+        const iconMenu = document.querySelector('.header__menu-icon');
+        const headerNav = document.querySelector('#header-nav');
+        btnMenu.addEventListener('click', menuToggle);
+
+        function menuToggle(){
+            iconMenu.classList.toggle('header__menu-icon--clicked')
+            var isOpen =  headerNav.classList.toggle('header-nav--open');
+            if(!isOpen){
+                headerNav.classList.add('header-nav--close');
+            }
+            else
+                {
+                    headerNav.classList.remove('header-nav--close');
+                }
+        }
+    </script>
+</body>
+
+</html>
